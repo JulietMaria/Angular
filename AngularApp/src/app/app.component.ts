@@ -7,5 +7,4 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'AngularApp';
-  typesOfCSS: string[] = ['CSS', 'SASS', 'SCSS', 'Bootstrap', 'Tailwind CSS'];
 }
