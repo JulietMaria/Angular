@@ -1,0 +1,91 @@
+<div>
+  <h1>GeeksforGeeks</h1>
+     <h3>Angular Material Horizontal Stepper</h3>
+<mat-horizontal-stepper #stepper linear>
+  <mat-step [stepControl]="firstFormGroup">
+    <form [formGroup]="firstFormGroup">
+      <ng-template matStepLabel>Enter your name</ng-template>
+      <mat-form-field>
+        <input
+          matInput
+          placeholder="Last name, First name"
+          formControlName="firstCtrl"
+          required
+        />
+      </mat-form-field>
+      <div>
+        <button mat-button matStepperNext>Next</button>
+      </div>
+    </form>
+  </mat-step>
+  <mat-step [stepControl]="secondFormGroup">
+    <form [formGroup]="secondFormGroup">
+      <ng-template matStepLabel>Enter your address</ng-template>
+      <mat-form-field>
+        <input
+          matInput
+          placeholder="Address"
+          formControlName="secondCtrl"
+          required
+        />
+      </mat-form-field>
+      <div>
+        <button mat-button matStepperPrevious>Back</button>
+        <button mat-button matStepperNext>Next</button>
+      </div>
+    </form>
+  </mat-step>
+  <mat-step>
+    <ng-template matStepLabel>Done</ng-template>
+    Details taken.
+    <div>
+      <button mat-button matStepperPrevious>Back</button>
+      <button mat-button (click)="stepper.reset()">Reset</button>
+    </div>
+  </mat-step>
+</mat-horizontal-stepper>
+<h3>Angular Material Vertical Stepper</h3>
+<mat-vertical-stepper #stepper1 linear>
+  <mat-step [stepControl]="firstFormGroup1">
+    <form [formGroup]="firstFormGroup1">
+      <ng-template matStepLabel>Enter your name</ng-template>
+      <mat-form-field>
+        <input
+          matInput
+          placeholder="Last name, First name"
+          formControlName="firstCtrl1"
+          required
+        />
+      </mat-form-field>
+      <div>
+        <button mat-button matStepperNext>Next</button>
+      </div>
+    </form>
+  </mat-step>
+  <mat-step [stepControl]="secondFormGroup1">
+    <form [formGroup]="secondFormGroup1">
+      <ng-template matStepLabel>Enter your address</ng-template>
+      <mat-form-field>
+        <input
+          matInput
+          placeholder="Address"
+          formControlName="secondCtrl1"
+          required
+        />
+      </mat-form-field>
+      <div>
+        <button mat-button matStepperPrevious>Back</button>
+        <button mat-button matStepperNext>Next</button>
+      </div>
+    </form>
+  </mat-step>
+  <mat-step>
+    <ng-template matStepLabel>Done</ng-template>
+    Details taken.
+    <div>
+      <button mat-button matStepperPrevious>Back</button>
+      <button mat-button (click)="stepper1.reset()">Reset</button>
+    </div>
+  </mat-step>
+</mat-vertical-stepper>
+</div>
