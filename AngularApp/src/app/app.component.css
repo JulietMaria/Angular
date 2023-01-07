@@ -1,7 +1,13 @@
 div {
-  padding-left: 50px;
+    padding-left: 50px;
 }
 
-h1{
-  padding-top: 50px;
+h1 {
+    padding-top: 50px;
+}
+
+h1,
+h3,
+h4 {
+    font-weight: 500;
 }

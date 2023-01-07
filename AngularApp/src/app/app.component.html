@@ -1,28 +1,94 @@
 <div>
-	<h1>GeeksforGeeks</h1>
-	<h3>Angular Material List</h3>
-	<div>
+    <h1>
+        GeeksforGeeks</h1>
+    <h3>Angular Material List</h3>
+    <h3>Angular Material Simple List</h3>
     <mat-list>
-      <mat-list-item> Angular </mat-list-item>
-      <mat-list-item> Vue </mat-list-item>
-      <mat-list-item> React </mat-list-item>
-     </mat-list>
-     <h3>Angular Material Navigation List</h3>
-      <mat-nav-list>
-      <a mat-list-item href="https://reactjs.org/" > React </a>
-      <a mat-list-item href="https://angular.io/" > Angular </a>
+        <mat-list-item> Angular </mat-list-item>
+        <mat-list-item> Vue </mat-list-item>
+        <mat-list-item> React </mat-list-item>
+    </mat-list>
+    <h3>Angular Material Navigation List</h3>
+    <mat-nav-list>
+        <a mat-list-item href="#"> Home </a>
+        <a mat-list-item href="#"> About </a>
+        <a mat-list-item href="#"> Services </a>
     </mat-nav-list>
+    <h3>Angular Material Action List</h3>
+    <mat-action-list>
+        <button mat-list-item (click)="save()"> Save </button>
+        <button mat-list-item (click)="undo()"> Undo </button>
+    </mat-action-list>
     <h3>Angular Material Selection List</h3>
     <mat-selection-list #css>
-      <mat-list-option *ngFor="let type of typesOfCSS">
-        {{type}}
-      </mat-list-option>
+        <mat-list-option *ngFor="let type of typesOfCSS">
+            {{type}}
+        </mat-list-option>
     </mat-selection-list>
     <br>
     <p>
-      Options selected: {{css.selectedOptions.selected.length}}
+        Options selected: {{css.selectedOptions.selected.length}}
     </p>
-	</div>
+    <h3>Angular Material Multi-line List</h3>
+    <h4>Two line list</h4>
+    <mat-list>
+        <mat-list-item *ngFor="let message of messages">
+            <h3 matLine> {{message.from}} </h3>
+            <p matLine>
+                <span>{{message.subject}}</span>
+                <span> {{message.content}}</span>
+            </p>
+        </mat-list-item>
+    </mat-list>
+    <h4>Three line list</h4>
+    <mat-list>
+        <mat-list-item *ngFor="let message of messages">
+            <h3 matLine> {{message.from}} </h3>
+            <p matLine>{{message.subject}}</p>
+            <p matLine> {{message.content}} </p>
+        </mat-list-item>
+    </mat-list>
+    <h3>Angular Material Lists with icons</h3>
+    <mat-list>
+        <mat-list-item *ngFor="let message of messages">
+            <mat-icon matListIcon>cloud</mat-icon>
+            <h3 matLine> {{ message.from }} </h3>
+            <p matLine>
+                <span> {{  message.subject }} </span>
+                <span>  {{  message.content }} </span>
+            </p>
+        </mat-list-item>
+    </mat-list>
+    <h3>Material Lists with avatars</h3>
+    <mat-list>
+        <mat-list-item *ngFor="let message of messages">
+            <img matListAvatar src="" alt="image">
+            <h3 matLine> {{ message.from }} </h3>
+            <p matLine>
+                <span> {{  message.subject  }}</span>
+                <span> {{ message.content }} </span>
+            </p>
+        </mat-list-item>
+    </mat-list>
+    <h3>Angular Material Dense lists</h3>
+    <mat-list dense>
+        <mat-list-item>Java</mat-list-item>
+        <mat-list-item>C++</mat-list-item>
+        <mat-list-item>Python</mat-list-item>
+    </mat-list>
+    <h3>Angular Material Lists with multiple sections</h3>
+    <mat-list>
+        <mat-list-item>
+            <mat-icon matListIcon>home</mat-icon>
+            <h3 matLine> Home </h3>
+            <p matLine>Line 1</p>
+        </mat-list-item>
+        <mat-divider></mat-divider>
+        <mat-list-item>
+            <mat-icon matListIcon>folder</mat-icon>
+            <h3 matLine> Folder</h3>
+            <p matLine>Line 1</p>
+            <p matLine>Line 2</p>
+        </mat-list-item>
+    </mat-list>
 </div>
-
-
