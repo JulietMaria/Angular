@@ -1,0 +1,132 @@
+<!-- <div>
+	<h1>GeeksforGeeks</h1>
+	<h3>Angular Material Chips</h3>
+    <p>Default Chip List</p>
+
+    <mat-chip-list aria-label="Item selection">
+      <mat-chip color="primary" selected>
+        Primary theme chip
+      </mat-chip>
+
+      <mat-chip color="accent" selected>
+        Accent theme chip
+      </mat-chip>
+
+      <mat-chip color="warn" selected>
+        Warn theme chip
+      </mat-chip>
+
+      <mat-chip>Default theme chip </mat-chip>
+    </mat-chip-list>
+    <br><br>
+
+    <p>Stacked Chip List</p>
+
+    <mat-chip-list class="mat-chip-list-stacked"
+      aria-label="Item selection">
+
+      <mat-chip color="primary" selected>
+        Primary theme chip
+      </mat-chip>
+
+      <mat-chip color="accent" selected>
+        Accent theme chip
+      </mat-chip>
+
+      <mat-chip color="warn" selected>
+        Warn theme chip
+      </mat-chip>
+
+      <mat-chip>Default theme chip </mat-chip>
+    </mat-chip-list>
+</div>
+
+ -->
+
+  <!-- <div>
+    <h1>GeeksforGeeks</h1>
+    <h3>Angular Material Avatar Chips</h3>
+    <mat-chip-list aria-label="Item selection">
+      <mat-chip>
+        <img
+          matChipAvatar
+          src="https://upload.wikimedia.org/wikipedia/commons/4/46/Delleboersterheide%2C_natuurgebied_van_het_It_Fryske_Gea._25-12-2019._%28actm.%29_10.jpg"
+          alt="Tree"
+        />
+        Tree
+      </mat-chip>
+      <mat-chip color="primary">
+        <img
+          matChipAvatar
+          src="https://upload.wikimedia.org/wikipedia/commons/c/c7/Close_wing_position_mud-puddling_and_peeing_activity_of_Papilio_slateri_%28Hewitson%2C1859%29_%E2%80%93_Blue-striped_Mime_%28Male%29.jpg"
+          alt="Butterfly"
+        />
+        Butterfly
+      </mat-chip>
+      <mat-chip color="accent">
+        <img
+          matChipAvatar
+          src="https://upload.wikimedia.org/wikipedia/commons/2/27/Black_skimmer_%28Rynchops_niger%29_in_flight.jpg"
+          alt="Bird"
+        />
+        Bird
+      </mat-chip>
+    </mat-chip-list>
+  </div>
+    <mat-chip
+      class="example-chip"
+      cdkDropList
+      cdkDropListOrientation="horizontal"
+      (cdkDropListDropped)="drop($event)"
+    >
+      <mat-chip class="example-box" cdkDrag *ngFor="let vegetable of vegetables">
+        {{vegetable.name}}
+      </mat-chip>
+    </mat-chip> -->
+
+
+ <!--  <mat-chip
+  class="example-chip"
+  cdkDropList
+  cdkDropListOrientation="horizontal"
+  (cdkDropListDropped)="drop($event)">
+  <mat-chip
+    class="example-box"
+    cdkDrag
+    *ngFor="let vegetable of vegetables">
+    {{vegetable.name}}
+  </mat-chip>
+</mat-chip> -->
+
+ <div>
+<!--   <h1>GeeksforGeeks</h1>
+  <h3>Angular Material Menu</h3>
+ <button mat-button [matMenuTriggerFor]="menu1">CSS Menu</button>
+ <mat-menu #menu1="matMenu">
+   <button mat-menu-item>Material UI</button>
+   <button mat-menu-item>Tailwind Css</button>
+   <button mat-menu-item>Bootstrap</button>
+ </mat-menu> -->
+ <br>
+ <br>
+ <h1>GeeksforGeeks</h1>
+ <h3>Angular Material Icon Menu</h3>
+ <button mat-icon-button [matMenuTriggerFor]="menu2" aria-label="Example icon-button with a menu">
+  <mat-icon>list</mat-icon>
+</button>
+<mat-menu #menu2="matMenu">
+  <button mat-menu-item>
+    <mat-icon>thumb_up</mat-icon>
+    <span>Thumbs up</span>
+  </button>
+  <button mat-menu-item disabled>
+    <mat-icon>thumb_down</mat-icon>
+    <span>Thumbs down</span>
+  </button>
+  <button mat-menu-item>
+    <mat-icon>info</mat-icon>
+    <span>Info</span>
+  </button>
+</mat-menu>
+
+ </div>
